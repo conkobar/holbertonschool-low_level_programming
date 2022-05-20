@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* this is a function to print a programming quip */
+/**
+ * main - Entry point
+ *
+ * Return: whatever
+ */
 
 int main(void)
 {

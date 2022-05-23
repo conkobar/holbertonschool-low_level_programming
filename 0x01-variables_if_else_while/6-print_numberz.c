@@ -8,9 +8,11 @@
 
 int main(void)
 {
-	char i = "0123456789";
+	int i = 0;
 
-	putchar(i);
+	for (i = 48 ; i < 58 ; i++)
+		putchar(i);
+
 	putchar('\n');
 	return (0);
 }

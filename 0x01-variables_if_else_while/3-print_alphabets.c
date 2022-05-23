@@ -8,8 +8,12 @@
 
 int main(void)
 {
-	putchar("{a..z}");
-	putchar("{A..Z}");
-	putchar("\n");
+	char i;
+
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
+	for (i = 'A' ; i <= 'Z' ; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }

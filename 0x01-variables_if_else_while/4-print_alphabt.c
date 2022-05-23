@@ -8,8 +8,10 @@
 
 int main(void)
 {
-	int i = {a..z}, i != e, i != q;
-	putchar(i);
-	putchar("\n");
+	char i;
+
+	for (i = 'a' && i != 'e' && i != 'q' ; i <= 'z' ; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }

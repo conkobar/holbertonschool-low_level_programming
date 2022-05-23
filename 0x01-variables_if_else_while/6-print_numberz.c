@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	putchar("{1..9}");
-	putchar("\n");
+	int i = "0123456789";
+
+	putchar(i);
+	putchar('\n');
 	return (0);
 }

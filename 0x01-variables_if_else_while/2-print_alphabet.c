@@ -8,7 +8,10 @@
 
 int main(void)
 {
-	putchar("{a..z}");
-	putchar("\n");
+	char i;
+
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }

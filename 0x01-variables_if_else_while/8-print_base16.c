@@ -3,7 +3,7 @@
 /**
  * main - idk
  *
- * return: idk
+ * Return: idk
  */
 
 int main(void)

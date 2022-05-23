@@ -8,7 +8,13 @@
 
 int main(void)
 {
-	printf("{0..9}");
+	int i = 0;
+
+	while (i < 10)
+	{
+		putchar(i);
+		i++;
+	}
 	putchar('\n');
 	return (0);
 }

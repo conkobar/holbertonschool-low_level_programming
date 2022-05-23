@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i = "0123456789";
+	char i = "0123456789";
 
 	putchar(i);
 	putchar('\n');

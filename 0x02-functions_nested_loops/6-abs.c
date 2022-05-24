@@ -1,11 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - idk
- *
+ * _abs - absoluter value
+ * @int: integer
  * Return: idk
  */
 
-int main(void)
+int _abs(int)
 {
+	int i;
 
+	if (i < 0)
+		_putchar(i + i + i);
+	else
+		_putchar(i);
+}

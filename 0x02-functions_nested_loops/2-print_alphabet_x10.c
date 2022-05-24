@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * void_print_alphabet_x10 - idk
+ * print_alphabet_x10 - idk
  *
  * Return: idk
  */
 
 void print_alphabet_x10(void)
 {
-	int i = 0; char c;
+	int i = 0;
+	char c;
 
 	while (i++ < 10)
 	{

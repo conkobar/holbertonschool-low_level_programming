@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - idk
@@ -6,6 +6,10 @@
  * Return: idk
  */
 
-int main(void)
+int _islower(int c)
 {
-
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
+}

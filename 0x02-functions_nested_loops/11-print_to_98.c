@@ -3,14 +3,12 @@
 
 /**
  * print_to_98 - idk
- *
+ * @n: idk
  * Return: idk
  */
 
-void print_to_98(void)
+void print_to_98(int n)
 {
-	int i;
-
 	while (i < 98)
 	{
 		printf("%i, ", i++);

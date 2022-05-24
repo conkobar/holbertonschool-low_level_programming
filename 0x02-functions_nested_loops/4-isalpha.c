@@ -1,11 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - idk
- *
+ * _isalpha - idk
+ * @c: idk
  * Return: idk
  */
 
-int main(void)
+int _isalpha(int c)
 {
-
+	if (c >= 'a' && c >= 'A' && c <= 'z' && c <= 'Z')
+		return (1);
+	else
+		return (0);
+}

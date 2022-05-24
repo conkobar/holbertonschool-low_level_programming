@@ -1,11 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - idk
- *
+ * add - idk
+ * @x: idk
+ * @y: idk
  * Return: idk
  */
 
-int main(void)
+int add(int x, int y)
 {
-
+	return (x + y);
+}

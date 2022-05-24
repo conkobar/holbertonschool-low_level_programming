@@ -2,14 +2,12 @@
 
 /**
  * _abs - absoluter value
- * @int: integer
+ * @i: integer
  * Return: idk
  */
 
-int _abs(int)
+int _abs(int i)
 {
-	int i;
-
 	if (i < 0)
 		_putchar(i + i + i);
 	else

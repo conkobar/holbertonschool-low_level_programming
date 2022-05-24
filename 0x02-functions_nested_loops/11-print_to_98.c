@@ -9,11 +9,11 @@
 
 void print_to_98(int n)
 {
-	while (i < 98)
+	while (n < 98)
 	{
-		printf("%i, ", i++);
+		printf("%i, ", n++);
 
-		if (i == 98)
+		if (n == 98)
 			printf("98");
 	}
 }

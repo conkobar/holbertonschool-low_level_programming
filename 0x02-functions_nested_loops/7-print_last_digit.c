@@ -1,11 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - idk
- *
+ * print_last_digit - idk
+ * @i: idk
  * Return: idk
  */
 
-int main(void)
+int print_last_digit(int i)
 {
-
+	return (i % 10);
+}

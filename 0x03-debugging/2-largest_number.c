@@ -29,5 +29,5 @@ int largest_number(int a, int b, int c)
 		largest = a;
 	}
 
-    return (largest);
+	return (largest);
 }

@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _isupper - check the code
+ * @c: defined in main
  * Return: 0
  */
 int _isupper(int c)

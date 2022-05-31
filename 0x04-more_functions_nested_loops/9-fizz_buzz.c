@@ -5,7 +5,7 @@
  *
  * Return: o
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -21,4 +21,5 @@ void main(void)
 			printf("%d ", i);
 	}
 	putchar(10);
+	return (0);
 }

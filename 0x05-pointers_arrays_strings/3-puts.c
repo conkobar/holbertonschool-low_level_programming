@@ -8,8 +8,10 @@
 
 void _puts(char *str)
 {
-	char[] arr = *str;
-
-	while (arr++)
-		_putchar(arr);
+	while (*str)
+	{
+		_putchar(str);
+		str++;
+	}
+	_putchar(10);
 }

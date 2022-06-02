@@ -7,6 +7,7 @@
  * @n: number of array elements to be printed
  * Return: 0
  */
+
 void print_array(int *a, int n)
 {
 	int i;
@@ -18,5 +19,5 @@ void print_array(int *a, int n)
 		else
 			printf(", %d", a[i]);
 	}
-	_putchar(10);
+	printf("\n");
 }

@@ -24,7 +24,7 @@ int prime_r(int i, int j)
  * Return: 1 if int is prime, else 0
  */
 
-int is_prime_number(int n);
+int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);

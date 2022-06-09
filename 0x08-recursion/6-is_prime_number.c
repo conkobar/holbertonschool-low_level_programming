@@ -12,10 +12,10 @@ int prime_r(int i, int j)
 	if (j == 1)
 		return (1);
 
-	if (i % 1 == 0 && j > 0)
+	if (i % j == 0 && j > 0)
 		return (0);
 
-	return (prime_r(i, i - 1));
+	return (prime_r(i, j - 1));
 }
 
 /**

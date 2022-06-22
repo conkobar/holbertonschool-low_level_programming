@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <string.h>
 
 /**
  * new_dog - creates a new dog (wow)
@@ -10,14 +11,22 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *updog = malloc(sizeof(struct dog));
+	dog_t *updog = malloc(sizeof(dog_t));
+	char *upname, *upowner;
 
-	if (updog == NULL)
+	if (updog == NULL || name == NULL || owner == NULL)
+	{
+		free(updog);
 		return (NULL);
+	}
 
-	updog->name = name;
+	upname = strdup(name);
+	updog->name = upname;
+
 	updog->age = age;
-	updog->owner = owner;
+
+	upowner = strdup(owner);
+	updog->owner = upowner;
 
 	return (updog);
 }

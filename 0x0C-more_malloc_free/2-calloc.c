@@ -7,7 +7,7 @@
  * Return: ptr to malloc, NULL if error
  */
 
-void *_calloc(unsigned int nmemb; unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
 	unsigned int i;

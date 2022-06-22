@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
-
 /**
  * struct dog - defines new struct
  * @name: dog's name
@@ -19,5 +17,7 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /* DOG_H */

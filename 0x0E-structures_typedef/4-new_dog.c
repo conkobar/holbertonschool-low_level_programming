@@ -22,11 +22,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	upname = strdup(name);
 	updog->name = upname;
+	if (upname == NULL)
+	{
+		free(upname);
+		free(updog);
+		return (NULL);
+	}
 
 	updog->age = age;
 
 	upowner = strdup(owner);
 	updog->owner = upowner;
+	if (upowner == NULL)
+	{
+		free(upowner);
+		free(updog);
+		return (NULL);
+	}
 
 	return (updog);
 }

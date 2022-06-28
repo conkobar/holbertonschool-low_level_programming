@@ -1,4 +1,4 @@
-#include "variadic_functionx.h"
+#include "variadic_functions.h"
 
 /**
  * sum_them_all - adds all variables
@@ -9,7 +9,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list var;
-	int i, sum;
+	unsigned int i, sum;
 
 	if (n == 0)
 		return (0);

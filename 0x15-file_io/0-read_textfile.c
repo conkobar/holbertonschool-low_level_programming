@@ -9,34 +9,34 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-        char *bufr = malloc(sizeof(char) * letters);
-        int x, y, z;
+	char *bufr = malloc(sizeof(char) * letters);
+	int x, y, z;
 
-        if (!bufr || !filename)
-                return (0);
+	if (!bufr || !filename)
+		return (0);
 
-        x = open(filename, O_RDONLY);
-        if (x < 0)
-                return (0);
+	x = open(filename, O_RDONLY);
+	if (x < 0)
+		return (0);
 
-        y = read(x, bufr, letters);
-        if (y < 0)
-        {
-                free(bufr);
-                return (0);
-        }
+	y = read(x, bufr, letters);
+	if (y < 0)
+	{
+		free(bufr);
+		return (0);
+	}
 
-        bufr[y] = '\0';
+	bufr[y] = '\0';
 
-        close(x);
+	close(x);
 
-        z = write(STDOUT_FILENO, bufr, y);
-        if (z < 0)
-        {
-                free(bufr);
-                return (0);
-        }
+	z = write(STDOUT_FILENO, bufr, y);
+	if (z < 0)
+	{
+		free(bufr);
+		return (0);
+	}
 
-        free(bufr);
-        return (z);
+	free(bufr);
+	return (z);
 }

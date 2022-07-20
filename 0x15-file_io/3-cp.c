@@ -10,7 +10,7 @@
 int main(int ac, char *av[])
 {
 	int fdr, fdw, r, x, y;
-	char *bufr = malloc(1024);
+	char bufr[1024];
 
 	if (ac != 3)
 	{
@@ -48,5 +48,5 @@ int main(int ac, char *av[])
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdw);
 		exit(100);
 	}
-	free(bufr), return (0);
+	return (0);
 }

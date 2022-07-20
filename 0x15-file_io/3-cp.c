@@ -24,7 +24,7 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 	fdw = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((r = read(fdr, bufr, BUFSIZ)) > 0)
+	while ((r = read(fdr, bufr, 1024)) > 0)
 	{
 		if (fdw < 0 || write(fdw, bufr, r) != r)
 		{

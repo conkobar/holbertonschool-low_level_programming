@@ -10,12 +10,18 @@ size_t print_dlistint_backward(const dlistint_t *h)
 {
 	unsigned int count = 0;
 
-	while (h->next)
-		h = h->next;
+	if (h)
+	{
+		count++;
+		while (h->next)
+		{
+			count++;
+			h = h->next;
+		}
+	}
 
 	while (h)
 	{
-		count++;
 		printf("%d\n", h->n);
 		h = h->prev;
 	}

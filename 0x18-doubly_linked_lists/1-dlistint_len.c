@@ -7,12 +7,11 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t node = h;
 	size_t count = 0;
 
-	while (node)
+	while (h)
 	{
-		node = node->next;
+		h = h->next;
 		count++;
 	}
 

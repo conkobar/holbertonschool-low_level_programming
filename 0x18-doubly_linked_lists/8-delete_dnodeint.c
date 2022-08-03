@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint - deletes the node @ index of a list
+ * delete_dnodeint_at_index - deletes the node @ index of a list
  * @head: list
  * @index: member # of element to delete
  *

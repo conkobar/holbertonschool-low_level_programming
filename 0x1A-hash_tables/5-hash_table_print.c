@@ -6,7 +6,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
-	unsigned int idx, punk;
+	unsigned int idx, punk = 0;
 
 	printf("{");
 
@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		node = ht->array[idx];
 
-		for (punk = 0, node = ht->array[idx]; node; node = node->next)
+		for (node = ht->array[idx]; node; node = node->next)
 		{
 			if (punk)
 				printf(", ");

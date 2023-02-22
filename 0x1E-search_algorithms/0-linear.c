@@ -2,6 +2,7 @@
 
 /**
  * linear_search - linearly finds desired index of array
+ *
  * @array: array to be searched
  * @size: size of array
  * @value: desired index

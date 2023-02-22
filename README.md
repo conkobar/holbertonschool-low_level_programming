@@ -1,6 +1,6 @@
-# [<center>C-Hello, World - 1119](https://intranet.hbtn.io/projects/1119)
+# [<center>0x06. C - More pointers, arrays and strings - 1125</center>](https://intranet.hbtn.io/projects/1125)
  ---
- ### <center>Description 
- ##### &emsp; This is the beginning of the C programming language section of Holberton School Tulsa's program. Basic functions of C and how to compile and correctly check the code.
+ ### <center>Description</center> 
+ ##### &emsp; Continued work on pointers and such.
  ---
- [<center>Buzz Kleine](https://github.com/conkobar)
+ [<center>Buzz</center>](github.com/conkobar)

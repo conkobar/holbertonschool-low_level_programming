@@ -40,23 +40,23 @@ int binary_recursion(int *array, int value, int left, int right)
 
 		if (array[mid] == value)
 		{
-			printArray(array, left, right);
+			print_array(array, left, right);
 			if (array[mid - 1] == value)
-				return (binaryRec(array, value, left, mid));
+				return (binary_recursion(array, value, left, mid));
 
 			return (mid);
 		}
 
 		if (array[mid] > value)
 		{
-			printArray(array, left, right);
-			return (binaryRec(array, value, left, mid - 1));
+			print_array(array, left, right);
+			return (binary_recursion(array, value, left, mid - 1));
 		}
 
 		else
 		{
-			printArray(array, left, right);
-			return (binaryRec(array, value, mid + 1, right));
+			print_array(array, left, right);
+			return (binary_recursion(array, value, mid + 1, right));
 		}
 	}
 	/* element not present, return -1 */

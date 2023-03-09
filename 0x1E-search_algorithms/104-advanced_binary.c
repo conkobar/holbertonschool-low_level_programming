@@ -1,88 +1,45 @@
 #include "search_algos.h"
 
 /**
- * advanced_binary - solves issues of not returning correct value if
- * that value appears more than once in the given array
- *
- * @array: given array
- * @size: size of given array
- * @value: value to find
- *
- * Return: int
+ * recursive_binary - searches for a value in a sorted array of integers
+ * @array: pointer to the first element of the array to search in
+ * @l: left index
+ * @r: right index
+ * @value: value to search for
+ * Return: first index where value is located. -1 if not found
+ */
+int recursive_binary(int *array, size_t l, size_t r, int value)
+{
+	size_t i;
+
+	if (r < l)
+		return (-1);
+
+	printf("Searching in array: ");
+	for (i = l; i < r; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
+
+	i = (l + r) / 2;
+	if (array[i] == value && array[i - 1] != value)
+		return (i);
+	if (array[i] >= value)
+		return (recursive_binary(array, l, i, value));
+
+	return (recursive_binary(array, i + 1, r, value));
+}
+
+/**
+ * advanced_binary - searches for a value in a sorted array of integers
+ * @array: pointer to the first element of the array to search in
+ * @size: number of elements in array
+ * @value: value to search for
+ * Return: first index where value is located
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (!array)
-	{
+	if (array == NULL || size == 0)
 		return (-1);
-	}
 
-	return (binary_recursion(array, value, 0, (int)size - 1));
-}
-
-/**
- * binary_recursion - recursively searches array for index
- *
- * @array: given array to search
- * @value: value to search for
- * @left: left half of the array
- * @right: right half of the array
- *
- * Return: int
- */
-int binary_recursion(int *array, int value, int left, int right)
-{
-	int mid = 0;
-
-	if (right >= left)
-	{
-		mid = left + (right - left) / 2;
-
-		if (array[mid] == value)
-		{
-			print_array(array, left, right);
-			if (array[mid - 1] == value)
-				return (binary_recursion(array, value, left, mid));
-
-			return (mid);
-		}
-
-		if (array[mid] > value)
-		{
-			print_array(array, left, right);
-			return (binary_recursion(array, value, left, mid - 1));
-		}
-
-		else
-		{
-			print_array(array, left, right);
-			return (binary_recursion(array, value, mid + 1, right));
-		}
-	}
-	/* element not present, return -1 */
-	return (-1);
-}
-
-/**
- * print_array - prints stylized array
- *
- * @array: given array
- * @low: given starting point
- * @high:  given end point
- */
-void print_array(int *array, int low, int high)
-{
-	printf("Searching in array: ");
-
-	while (low <= high)
-	{
-		printf("%d", array[low]);
-
-		if (low != high)
-			printf(", ");
-
-		low++;
-	}
-
-	putchar(10);
+	return (recursive_binary(array, 0, size - 1, value));
 }

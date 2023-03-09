@@ -33,28 +33,34 @@ int advanced_binary(int *array, size_t size, int value)
 int binary_recursion(int *array, int value, int left, int right)
 {
 	int mid = 0;
-	int ret = -1;
 
 	if (right >= left)
 	{
 		mid = left + (right - left) / 2;
-		ret = mid;
 
-		print_array(array, left, right);
+		if (array[mid] == value)
+		{
+			printArray(array, left, right);
+			if (array[mid - 1] == value)
+				return (binaryRec(array, value, left, mid));
 
-		if (array[mid - 1] == value)
-			ret = (binary_recursion(array, value, left, mid));
+			return (mid);
+		}
 
 		if (array[mid] > value)
-			ret = (binary_recursion(array, value, left, mid - 1));
+		{
+			printArray(array, left, right);
+			return (binaryRec(array, value, left, mid - 1));
+		}
 
-		if (array[mid] < value)
-			ret = (binary_recursion(array, value, mid + 1, right));
-
-		return (ret);
+		else
+		{
+			printArray(array, left, right);
+			return (binaryRec(array, value, mid + 1, right));
+		}
 	}
-
-	return (ret);
+	/* element not present, return -1 */
+	return (-1);
 }
 
 /**
